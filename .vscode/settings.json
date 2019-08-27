@@ -1,0 +1,7 @@
+{
+  "javascript.validate.enable": false,
+  "typescript.suggest.autoImports": false,
+  "autoimport.filesToScan": "**/*.{ts,tsx, js}",
+  "autoimport.useSemiColon": false,
+  "editor.tabSize": 2
+}

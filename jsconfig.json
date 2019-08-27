@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "lib": ["dom", "es2015", "es2017"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      // "@components/*": ["./src/components/*"],
+      // "models/*": ["./src/models/*"]
+      "@types": ["./src/types/*"],
+      "@actions": ["./src/actions/*"],
+      "@configs": ["./src/configs/*"],
+      "@api": ["./src/api/*"],
+      "@components": ["./src/components/*"],
+      "@i18n": ["./src/i18n/*"],
+      "@style": ["./src/styles/*"]
+    }
+  },
+  "exclude": ["./node_modules/**/"]
+}
