@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View } from 'react-native'
 
-export default class ExampleComponent extends Component {
-  state={}
+export default class SettingComponent extends Component {
+  state={
+
+  }
 
   render() {
     return (
       <View>
-        <Text> ExampleComponent </Text>
+        <Text> SettingComponent </Text>
       </View>
     )
   }

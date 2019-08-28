@@ -15,7 +15,8 @@
       "@api": ["./src/api/*"],
       "@components": ["./src/components/*"],
       "@i18n": ["./src/i18n/*"],
-      "@style": ["./src/styles/*"]
+      "@styles": ["./src/styles/*"],
+      "@containers": ["./src/containers/*"]
     }
   },
   "exclude": ["./node_modules/**/"]

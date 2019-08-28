@@ -1,20 +1,38 @@
 import React from 'react'
 import { createBottomTabNavigator, createAppContainer, createStackNavigator, BottomTabBar } from 'react-navigation'
-import FontAwesome5Pro from 'react-native-vector-icons/FontAwesome5Pro'
-import { ExampleComponent } from '@components'
+import Ionicons from 'react-native-vector-icons/Ionicons'
+import { ScheduleScreenContainer } from '@containers/Schedule'
+import { SettingContainer } from '@containers/Setting'
+import { HomeComponent } from '@components'
 import translate from '@i18n'
-import { Color } from '@style'
+import { Color } from '@styles'
 
-const getTabBarIcon = (iconName, focused) => <FontAwesome5Pro light={!focused} solid={focused} name={iconName} style={{ fontSize: 24, color: focused ? Color.primary : Color.muted }} />
+const getTabBarIcon = (iconName, focused) => <Ionicons light={!focused} solid={focused} name={iconName} style={{ fontSize: focused ? 28 : 24, color: focused ? Color.primary : Color.muted }} />
 
 const MainNavigator = createBottomTabNavigator({
-  Example: {
-    screen: ExampleComponent,
+  Home: {
+    screen: HomeComponent,
     navigationOptions: {
-      tabBarLabel: translate('tab.discovery'),
-      tabBarIcon: ({ focused }) => getTabBarIcon('globe', focused),
+      tabBarLabel: translate('tab.home'),
+      tabBarIcon: ({ focused }) => getTabBarIcon('ios-home', focused),
     }
   },
+
+  Schedule: {
+    screen: ScheduleScreenContainer,
+    navigationOptions: {
+      tabBarLabel: translate('tab.schedule'),
+      tabBarIcon: ({ focused }) => getTabBarIcon('md-calendar', focused),
+    }
+  },
+
+  Setting: {
+    screen: SettingContainer,
+    navigationOptions: {
+      tabBarLabel: translate('tab.setting'),
+      tabBarIcon: ({ focused }) => getTabBarIcon('md-settings', focused),
+    }
+  }
 })
 
 

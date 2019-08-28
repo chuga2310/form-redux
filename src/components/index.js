@@ -1,5 +1,5 @@
-import ExampleComponent from './ExampleComponent'
+import HomeComponent from './HomeComponent'
 
 export {
-  ExampleComponent
+  HomeComponent
 }
